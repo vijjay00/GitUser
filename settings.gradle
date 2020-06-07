@@ -1,0 +1,2 @@
+rootProject.name='GitUser'
+include ':app'

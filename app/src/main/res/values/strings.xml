@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GitUser</string>
+
+    <string name="failed_to_load_retry">Failed to load retry</string>
+    <string name="m_Forks"> %1$d Forks</string>
+    <string name="m_Stars"> %1$d Stars</string>
+    <string name="m_Followers"> %1$d Followers</string>
+    <string name="m_Following"> %1$d Following</string>
+    <string name="m_Repo"> Repo-Score : %1$s</string>
+
+    <string name="client_id">1a641d79d7db47fc440e</string>
+    <string name="access_token">9655c9b74100c3bf9d01e48094c152cafc37cab3</string>
+    <string name="domain">https://www.github.com</string>
+    <string name="applicationId">https://www.github.com/android/com.initial.gituser/callback</string>
+</resources>

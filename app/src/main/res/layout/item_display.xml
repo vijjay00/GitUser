@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_alignParentStart="true"
+            android:layout_width="75dp"
+            android:layout_height="75dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop"
+                android:layout_width="75dp"
+                android:layout_height="75dp"/>
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:visibility="visible"
+                android:layout_centerInParent="true"
+                android:theme="@style/CircularProgress"/>
+            <TextView
+                android:id="@+id/retry"
+                android:visibility="gone"
+                android:drawableTop="@drawable/ic_retry"
+                android:text="Failed to load retry"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/noImage"
+                android:text="No Image"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/name"
+            android:textSize="@dimen/text_17sp"
+            android:layout_toEndOf="@+id/relative"
+            android:textColor="@color/black"
+            android:maxLines="2"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+         <TextView
+             android:id="@+id/repo"
+             android:layout_margin="@dimen/margin_3dp"
+             android:textSize="@dimen/text_14sp"
+             android:textColor="@color/black"
+             android:layout_centerVertical="true"
+             android:layout_alignParentEnd="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

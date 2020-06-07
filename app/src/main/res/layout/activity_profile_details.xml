@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProfileDetailsActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:background="@color/white"
+                android:weightSum="2"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:id="@+id/relative"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image"
+                        android:layout_alignParentStart="true"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="@dimen/margin_10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <ProgressBar
+                        android:id="@+id/progress_bar1"
+                        style="@style/Widget.AppCompat.ProgressBar"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:visibility="visible"
+                        android:layout_centerInParent="true"
+                        android:theme="@style/CircularProgress"/>
+                    <TextView
+                        android:id="@+id/retry"
+                        android:visibility="gone"
+                        android:drawableTop="@drawable/ic_retry"
+                        android:text="Failed to load retry"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/noImage"
+                        android:text="No Image"
+                        android:visibility="gone"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/name"
+                        android:textSize="@dimen/text_14sp"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/margin_3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/email"
+                        android:textSize="@dimen/text_14sp"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/margin_3dp"
+                        android:text="Email not found"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/location"
+                        android:textSize="@dimen/text_14sp"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/margin_3dp"
+                        android:text="Location not found"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/joinDate"
+                        android:textSize="@dimen/text_14sp"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/margin_3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/followers"
+                        android:textSize="@dimen/text_14sp"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/margin_3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/following"
+                        android:textSize="@dimen/text_14sp"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/margin_3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/blog"
+                android:textSize="@dimen/text_14sp"
+                android:textColor="@color/black"
+                android:layout_margin="7dp"
+                android:text="No Bio Found"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_query2"
+                android:layout_margin="@dimen/margin_10dp"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:hint=" Search For User's Repositories"
+                android:textColorHint="@color/black_50"
+                android:padding="10dp"
+                android:background="@drawable/search_border"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <include android:id="@+id/layoutR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior = "@string/appbar_scrolling_view_behavior"
+            layout="@layout/item_recyclerview"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
